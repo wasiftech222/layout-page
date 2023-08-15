@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-wid12h, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>layout</title>
+    <style>
+        .first_image img {
+            width: 100%;
+            height: 292px;
+
+        }
+
+        .second_image img {
+            width: 100%;
+            height: 230px;
+
+        }
+
+        .first_text {
+            border: 1px solid grey;
+            padding: 5px;
+
+        }
+
+        .third_text {
+            border: 1px solid grey;
+            padding: 10px;
+
+        }
+
+        .third_image {
+            border: 1px solid grey;
+
+        }
+
+        .third_image img {
+            padding: 5px 10px;
+
+        }
+
+        .third_image h2,
+        p {
+            padding: 0px 20px;
+
+        }
+
+        .footer {
+            background-color: darkgray;
+            color: aliceblue;
+            padding: 2px;
+        }
+
+        p.text-center.text-body-secondary {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+            height: 400px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 6s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <a class="navbar-brand text-light" href="#">Wiki</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">about</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Contact US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img4.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img5.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img6.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div style="padding: 50px 0px; border: 1px solid grey;">
+                    <h1 align="center">Responsive Layout</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4 ">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+
+                <div class="first_image"> <img src="img1.jpg" class="img-fluid"> </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="first_text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Explicabo iure voluptates expedita odio sunt ipsum consequatur dolorem tenetur hic omnis, rem
+                        impedit.
+                        Quia eum sapiente pariatur deleniti amet ullam error?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ullam harum nostrum quo dolore amet consequatur rem voluptate odit enim,
+                        accusamus iusto eos tempora omnis pariatur doloremque ipsa adipisci veniam obcaecati.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="first_text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ullam harum nostrum quo dolore amet consequatur rem voluptate odit enim,
+                        accusamus iusto eos tempora omnis pariatur doloremque ipsa adipisci veniam obcaecati.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Explicabo iure voluptates expedita odio sunt ipsum consequatur dolorem tenetur hic omnis, rem
+                        impedit.
+                        Quia eum sapiente pariatur deleniti amet error?</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my-4 ">
+
+            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                <div class="third_text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Explicabo iure voluptates expedita odio sunt ipsum consequatur dolorem tenetur hic omnis, rem
+                        impedit.
+                        Quia eum sapiente pariatur deleniti amet ullam error? Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Laudantium eligendi, mollitia, tempore tempora fugiat animi
+                        ducimus
+                        voluptatibus debitis expedita iusto dolor corrupti sunt a nemo accusantium. Quisquam aliquid
+                        natus sequi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate eius vitae debitis,
+                        maxime nam, esse laborum repellendus sed ipsa iste nulla odit tempora quibusdam. Quas sapiente
+                        consectetur aspernatur. Laborum!
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+
+                <div class="second_image"> <img src="img2.jpg" class="img-fluid"> </div>
+            </div>
+        </div>
+        <div class="row my-4">
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                <div class="third_image"><img src="img3.jpg" class="img-thumbnail">
+                    <h2>Description</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Odio magni reiciendis, fuga iste, quis dolorum qui ut exercitationem
+                        quaerat repudiandae laborum vitae ea vero dolore blanditiis eaque deleniti nemo! Hic?</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Home</li>
+                        <li class="list-group-item">About</li>
+                        <li class="list-group-item">Contact Us</li>
+                        <li class="list-group-item">Blogs</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                <div>
+                    <h3>Location</h3>
+                    <p>chaklala Scheme 3 lane 4 street 21 house 81 </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                <div>
+                    <h4>Login Form</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"><B>Email Address</B></label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+            <footer>
+                <p class="text-center text-body-secondary">© 2000 Company Nexttech, Inc copyRight</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</bo
